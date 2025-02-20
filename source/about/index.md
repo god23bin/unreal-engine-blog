@@ -2,7 +2,6 @@
 title: about
 date: 2024-08-07 21:11:00
 layout: about
-comment: bool
 ---
 
 ## 🚀  你好呀，我是方圆！
