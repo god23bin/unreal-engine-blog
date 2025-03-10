@@ -102,4 +102,7 @@ theme: fluid
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repo: https://github.com/god23bin/unreal-engine-blog
+  branch: gh-pages
+  message: '更新时间: {{ now("YYYY-MM-DD HH:mm:ss") }}'
