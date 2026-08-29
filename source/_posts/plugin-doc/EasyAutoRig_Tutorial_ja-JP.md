@@ -12,6 +12,8 @@ published: true
 ---
 **{% post_link plugin-doc/EasyAutoRig_DetailedGuide_ja-JP EasyAutoRig 詳細使用ガイド %}**
 
+**{% post_link plugin-doc/EasyAutoRig_FAQ_ja-JP EasyAutoRig FAQ / よくある質問 %}**
+
 ## 1. EasyAutoRig とは
 
 EasyAutoRig は Unreal Engine 向けの人型キャラクター自動リギングツールです。

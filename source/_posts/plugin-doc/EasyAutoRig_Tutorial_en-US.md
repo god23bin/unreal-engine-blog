@@ -12,6 +12,8 @@ published: true
 ---
 **{% post_link plugin-doc/EasyAutoRig_DetailedGuide_en-US EasyAutoRig Detailed User Guide %}**
 
+**{% post_link plugin-doc/EasyAutoRig_FAQ_en-US EasyAutoRig FAQ %}**
+
 ## 1. What Is EasyAutoRig?
 
 EasyAutoRig is a humanoid character auto-rigging tool for Unreal Engine.

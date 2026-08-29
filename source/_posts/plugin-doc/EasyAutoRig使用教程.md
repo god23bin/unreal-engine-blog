@@ -15,6 +15,8 @@ published: true
 
 **{% post_link plugin-doc/EasyAutoRig_DetailedGuide_zh-CN EasyAutoRig 详细使用说明 %}**
 
+**{% post_link plugin-doc/EasyAutoRig_FAQ_zh-CN EasyAutoRig 常见问题 %}**
+
 ## 1. EasyAutoRig 是什么？
 
 EasyAutoRig 是一款用于 Unreal Engine 的人形角色自动绑定工具。
