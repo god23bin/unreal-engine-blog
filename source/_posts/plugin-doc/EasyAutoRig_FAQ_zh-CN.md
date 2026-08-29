@@ -13,7 +13,174 @@ published: true
 
 **{% post_link plugin-doc/EasyAutoRig_FAQ_ja-JP EasyAutoRig よくある質問 %}** | **{% post_link plugin-doc/EasyAutoRig_FAQ_en-US EasyAutoRig FAQ %}**
 
-## 1. EasyAutoRig 是做什么的？
+# 购买前先看
+
+下面这些问题更适合还没有购买 EasyAutoRig、正在判断它是否适合自己的人。
+
+## 1. 什么人最适合使用 EasyAutoRig？
+
+EasyAutoRig 更适合已经遇到**实际人形角色绑定需求**的 Unreal Engine 开发者，例如：
+
+- 手上已经有 T Pose / A Pose 人形 Static Mesh
+- 希望让角色更快进入 UE5 动画工作流
+- 正在制作 Gameplay Prototype 或独立游戏原型
+- 经常需要快速测试不同的人形角色
+- 不擅长完整的 Blender / Maya Rigging 流程
+- 不希望每次都从零创建 UE5 风格骨架、初始权重和 Physics Asset
+
+它的核心价值不是“替代所有角色绑定工作”，而是尽可能先完成大量重复的 0 → 1 工作。
+
+------
+
+## 2. 我只是 Unreal Engine 初学者，现在有必要购买吗？
+
+不一定。
+
+如果你目前还在学习 Unreal Engine 的基础内容，并没有实际的人形角色绑定需求，可以先不用购买。
+
+更建议等你真正遇到下面这些情况时再考虑：
+
+- 下载或购买了一个人形 Static Mesh，但它还不能直接进入动画工作流
+- 想快速测试 Manny / UE5 风格动画工作流
+- 正在做 Gameplay Prototype，需要尽快让角色动起来
+- 发现自己正在反复进行相似的基础绑定工作
+
+如果目前没有这些需求，等真正需要的时候再购买也完全可以。
+
+------
+
+## 3. EasyAutoRig 能代替专业 Character Rigger 吗？
+
+不能。
+
+专业角色绑定还可能涉及：
+
+- 高质量 Skin Weight 精修
+- Facial Rig
+- Corrective Shapes
+- Cloth / Hair Rig
+- 特殊角色结构
+- 高级 Deformation
+- 项目定制 Control Rig
+
+EasyAutoRig 更适合把基础绑定快速推进到一个**可以继续测试、继续精修的起点**。
+
+对于 Prototype、独立游戏开发、动画测试和快速验证，这通常已经很有价值；对于高要求的最终角色资产，仍然建议由专业人员继续精修。
+
+------
+
+## 4. AccuRig 已经可以自动绑定了，为什么还需要 EasyAutoRig？
+
+AccuRig 是很成熟的人形自动绑定工具，EasyAutoRig 并不是为了证明 AccuRig“不好用”。
+
+EasyAutoRig 主要解决的是一个更具体的 Unreal Engine 工作流：
+
+> **如果你已经在 Unreal Engine 中拥有一个符合要求的 T/A Pose 人形 Static Mesh，并且目标就是快速得到 UE5 风格骨架、Skeletal Mesh、基础 Skin Weights 和可选 Physics Asset，可以直接在 UE 中完成这套流程。**
+
+如果你已经有成熟的 AccuRig 工作流，并且对当前流程满意，没有必要为了使用 EasyAutoRig 而更换工具。
+
+EasyAutoRig 更适合希望减少外部工具往返、把基础绑定流程尽量留在 Unreal Engine 内完成的用户。
+
+------
+
+## 5. Blender Auto-Rig Pro 已经能做很多绑定工作了，为什么还需要 EasyAutoRig？
+
+Auto-Rig Pro 是 Blender 中非常成熟的 Rigging 工具，功能范围也比 EasyAutoRig 更广。
+
+两者解决的工作流并不完全相同。
+
+EasyAutoRig 更强调：
+
+> **Static Mesh 已经在 Unreal Engine → 放置 Landmark → 生成 UE5 风格 Skeleton / Skeletal Mesh / 初始权重 / 可选 Physics Asset。**
+
+如果你的主要角色制作流程本来就在 Blender 中，并且已经熟悉 Auto-Rig Pro，那么继续使用现有工作流完全没有问题。
+
+如果你主要工作在 Unreal Engine，希望减少 Blender ↔ UE 之间的往返，EasyAutoRig 才更有意义。
+
+------
+
+## 6. Mixamo 不是也可以自动绑定吗？
+
+可以，Mixamo 同样是一个可选方案。
+
+EasyAutoRig 的目标不是提供一个通用在线自动绑定服务，而是围绕 Unreal Engine 工作流生成 UE5 风格的人形骨架，并同时提供 Twist Bones、IK Bones、Helper Bones、初始 Skin Weights 和可选 Physics Asset。
+
+如果 Mixamo 已经完全满足你的项目需求，就没有必要额外购买 EasyAutoRig。
+
+如果你的目标是尽快获得更贴近 UE5 后续动画工作流的基础绑定结果，再考虑 EasyAutoRig。
+
+------
+
+## 7. 我的角色已经有 Skeleton 和 Skin Weights 了，还需要 EasyAutoRig 吗？
+
+通常不需要。
+
+如果角色已经拥有质量良好的 Skeleton 和 Skin Weights，并且可以正常进入你的 Unreal Engine 动画工作流，没有必要为了使用 EasyAutoRig 而重新绑定。
+
+EasyAutoRig 主要面向的是：
+
+> **尚未完成绑定的人形 Static Mesh。 让其更容易、且更快速地接入 Unreal Engine 动画生态。**
+
+------
+
+## 8. EasyAutoRig 支持面部骨骼 / Facial Rig 吗？
+
+当前不支持自动 Facial Rig。
+
+EasyAutoRig 当前主要解决身体人形骨架绑定工作流。面部表情、Facial Bones、Morph Targets、MetaHuman Facial Rig 等不属于当前自动绑定范围。
+
+------
+
+## 9. EasyAutoRig 支持四足、动物、怪物或多手臂角色吗？
+
+当前正式支持目标是**标准双足人形角色**。
+
+不建议用于：
+
+- 四足动物
+- 蜘蛛 / 多足角色
+- 蛇形角色
+- 非人形怪物
+- 多手臂角色
+- 身体结构严重偏离标准人形的角色
+
+Stylized Humanoid 是否适用，应根据实际人体结构、Landmark 和 Validate Rig 结果判断。
+
+------
+
+## 10. EasyAutoRig 可以把一个已经绑定好的其它 Skeleton 直接转换成 Manny Skeleton 吗？
+
+EasyAutoRig 当前主要工作流是：
+
+> **未绑定 Static Mesh → 新建 UE5 风格 Skeleton / Skeletal Mesh。**
+
+它不是一个任意 Skeleton Conversion / Bone Remapping 工具。
+
+------
+
+## 11. 什么情况下 EasyAutoRig 最值得购买？
+
+可以先问自己一个问题：
+
+> **我是否正在重复处理“人形 Static Mesh → UE5 可用 Skeletal Mesh”这件事情？**
+
+如果你只是偶尔处理一个角色，而且已经熟悉 Blender、Maya、AccuRig、Auto-Rig Pro 或其它绑定流程，EasyAutoRig 不一定能带来明显价值。
+
+如果你经常：
+
+- 下载或购买不同的人形角色
+- 制作 Gameplay Prototype
+- 测试动画
+- 快速验证角色是否适合项目
+- 不想反复建立 UE5 风格骨架和基础权重
+
+那么 EasyAutoRig 的主要价值就是：**减少重复工作，把你的时间留给真正需要人工判断和精修的部分。**
+
+------
+
+# 核心功能与使用限制
+
+## 12. EasyAutoRig 是做什么的？
 
 EasyAutoRig 是一款用于 Unreal Engine 的人形角色自动绑定工具。
 
@@ -35,7 +202,7 @@ EasyAutoRig 是一款用于 Unreal Engine 的人形角色自动绑定工具。
 
 ------
 
-## 2. EasyAutoRig 能不能一键生成完美权重？
+## 13. EasyAutoRig 能不能一键生成完美权重？
 
 不能保证。
 
@@ -63,7 +230,7 @@ EasyAutoRig 的自动蒙皮更适合作为一个**快速、可用的初始结果
 
 ------
 
-## 3. EasyAutoRig 支持什么样的角色？
+## 14. EasyAutoRig 支持什么样的角色？
 
 当前主要支持：
 
@@ -88,7 +255,7 @@ EasyAutoRig 的自动蒙皮更适合作为一个**快速、可用的初始结果
 
 ------
 
-## 4. 为什么只支持 T Pose 和 A Pose？
+## 15. 为什么只支持 T Pose 和 A Pose？
 
 EasyAutoRig 不只是根据几个点生成骨骼，还会分析人体各个区域之间的空间关系。
 
@@ -111,7 +278,7 @@ T Pose 和 A Pose 提供了相对稳定的人体空间关系，可以让这些�
 
 ------
 
-## 5. 模型一定要是裸模吗？
+## 16. 模型一定要是裸模吗？
 
 不需要。
 
@@ -135,7 +302,9 @@ T Pose 和 A Pose 提供了相对稳定的人体空间关系，可以让这些�
 
 ------
 
-## 6. SemanticFull 是什么？
+# 自动蒙皮、Landmark 与 Validate Rig
+
+## 17. SemanticFull 是什么？
 
 SemanticFull 是 EasyAutoRig 的完整人体语义蒙皮路径。
 
@@ -159,7 +328,7 @@ SemanticFull 是 EasyAutoRig 的完整人体语义蒙皮路径。
 
 ------
 
-## 7. GeodesicCompatibility 是什么？是不是失败了？
+## 18. GeodesicCompatibility 是什么？是不是失败了？
 
 不是。
 
@@ -185,7 +354,7 @@ GeodesicCompatibility 仍然可以生成：
 
 ------
 
-## 8. 我的模型拓扑看起来很标准，为什么还是使用 GeodesicCompatibility？
+## 19. 我的模型拓扑看起来很标准，为什么还是使用 GeodesicCompatibility？
 
 如果角色本身的布线、拓扑和人体结构看起来没有明显问题，但 Validate Rig 仍然选择 GeodesicCompatibility，建议优先重新检查 **Landmark**。
 
@@ -216,7 +385,7 @@ SemanticFull 不只依赖模型拓扑，Landmark 也是 EasyAutoRig 判断人体
 
 ------
 
-## 9. 怎样判断 Landmark 是否放得合理？
+## 20. 怎样判断 Landmark 是否放得合理？
 
 一个简单原则是：
 
@@ -224,19 +393,19 @@ SemanticFull 不只依赖模型拓扑，Landmark 也是 EasyAutoRig 判断人体
 
 例如：
 
-### Elbow
+### lowerarm
 
 应该位于手臂真正发生弯曲的位置。
 
-### Knee
+### calf
 
 应该位于大腿和小腿真正发生旋转的位置。
 
-### Hip
+### pelvis
 
 应该位于骨盆和大腿连接的实际关节附近。
 
-### Wrist
+### hand
 
 应该位于前臂和手掌连接的位置。
 
@@ -248,7 +417,7 @@ SemanticFull 不只依赖模型拓扑，Landmark 也是 EasyAutoRig 判断人体
 
 ------
 
-## 10. Joint Center 已经自动计算了，为什么还需要手动调整？
+## 21. Joint Center 已经自动计算了，为什么还需要手动调整？
 
 Joint Center 会尝试把 Landmark 从模型表面移动到局部体积中心。
 
@@ -282,7 +451,7 @@ Joint Center 会尝试把 Landmark 从模型表面移动到局部体积中心。
 
 ------
 
-## 11. Validate Rig 显示黄色，还可以继续吗？
+## 22. Validate Rig 显示黄色，还可以继续吗？
 
 可以。
 
@@ -304,7 +473,7 @@ Yellow 并不等于失败。
 
 ------
 
-## 12. Validate Rig 显示绿色，是不是表示最终权重一定完美？
+## 23. Validate Rig 显示绿色，是不是表示最终权重一定完美？
 
 不是。
 
@@ -329,7 +498,7 @@ Validate Rig 解决的是“当前绑定路径是否成立”，而最终变形�
 
 ------
 
-## 13. Validate Rig 显示红色应该怎么办？
+## 24. Validate Rig 显示红色应该怎么办？
 
 Red / Cannot Rig 表示已经发现会阻止当前绑定流程的问题。
 
@@ -347,7 +516,7 @@ Red / Cannot Rig 表示已经发现会阻止当前绑定流程的问题。
 
 ------
 
-## 14. 为什么不能 SemanticFull 失败以后偷偷切换到 Geodesic？
+## 25. 为什么不能 SemanticFull 失败以后偷偷切换到 Geodesic？
 
 这是 EasyAutoRig 有意采用的设计。
 
@@ -373,7 +542,7 @@ Validate / Readiness Analysis
 
 ------
 
-## 15. Skeleton Only 是什么？
+## 26. Skeleton Only 是什么？
 
 Skeleton Only / 仅绑定骨骼表示：
 
@@ -399,7 +568,7 @@ Skeleton Only / 仅绑定骨骼表示：
 
 ------
 
-## 16. 手指不是五根怎么办？
+## 27. 手指不是五根怎么办？
 
 可以在 EasyAutoRig 的 Hand / Finger 设置中调整。
 
@@ -416,7 +585,9 @@ Skeleton Only / 仅绑定骨骼表示：
 
 ------
 
-## 17. 生成 Physics Asset 后可以直接用于游戏吗？
+# 输出结果、动画与后续检查
+
+## 28. 生成 Physics Asset 后可以直接用于游戏吗？
 
 EasyAutoRig 的目标是生成一套**可以作为游戏开发起点**的 Physics Asset。
 
@@ -438,7 +609,7 @@ EasyAutoRig 的目标是生成一套**可以作为游戏开发起点**的 Physic
 
 ------
 
-## 18. 为什么 Rig 成功了，播放动画还是有问题？
+## 29. 为什么 Rig 成功了，播放动画还是有问题？
 
 Rig 成功只表示绑定流程完成。
 
@@ -462,7 +633,7 @@ Rig 成功只表示绑定流程完成。
 
 ------
 
-## 19. EasyAutoRig 生成的是 Manny Skeleton 吗？
+## 30. EasyAutoRig 生成的是 Manny Skeleton 吗？
 
 EasyAutoRig 的目标是生成**符合 UE5 标准人形骨架风格和约定的 Skeleton**，包括对应的：
 
@@ -484,7 +655,7 @@ EasyAutoRig 的目标是生成**符合 UE5 标准人形骨架风格和约定的 
 
 ------
 
-## 20. 为什么会看到 Retargeting Risk？
+## 31. 为什么会看到 Retargeting Risk？
 
 Retargeting Risk 通常表示当前角色的身体比例与常见 Manny 比例存在比较明显的差异。
 
@@ -504,7 +675,7 @@ Retargeting Risk 通常表示当前角色的身体比例与常见 Manny 比例�
 
 ------
 
-## 21. 多个独立 Mesh Component 会影响绑定吗？
+## 32. 多个独立 Mesh Component 会影响绑定吗？
 
 不一定会阻止绑定。
 
@@ -524,7 +695,7 @@ EasyAutoRig 可以处理包含多个独立组件的角色，例如：
 
 ------
 
-## 22. 裙子、披风和长头发能自动得到完美权重吗？
+## 33. 裙子、披风和长头发能自动得到完美权重吗？
 
 不能保证。
 
@@ -541,7 +712,7 @@ EasyAutoRig 可以帮助生成初始权重，但长裙、长披风、长发等�
 
 ------
 
-## 23. 哪些位置最值得在 Rig 后检查？
+## 34. 哪些位置最值得在 Rig 后检查？
 
 建议至少测试：
 
@@ -571,7 +742,7 @@ EasyAutoRig 可以帮助生成初始权重，但长裙、长披风、长发等�
 
 ------
 
-## 24. 为什么不直接从零手工绑定？
+## 35. 为什么不直接从零手工绑定？
 
 当然可以。
 
@@ -591,7 +762,7 @@ EasyAutoRig 主要解决的是**时间成本**。
 
 ------
 
-## 25. EasyAutoRig 最适合什么场景？
+## 36. EasyAutoRig 最适合什么场景？
 
 比较适合：
 
@@ -606,3 +777,39 @@ EasyAutoRig 主要解决的是**时间成本**。
 它最核心的价值可以概括成一句话：
 
 > **不是替你消灭所有角色绑定工作，而是尽可能帮你把重复的 0 → 1 工作先完成，让角色更快进入游戏。**
+
+------
+
+# 更新与支持
+
+## 37. EasyAutoRig 以后还会持续增加新功能吗？
+
+EasyAutoRig 当前的核心功能已经基本完成。
+
+后续开发重点主要是：
+
+- 修复用户提交的可复现 Bug
+- 处理必要的稳定性问题
+- 在需要时维护 Unreal Engine 版本兼容性
+
+您当前购买决策应该基于**插件现在已经提供的功能**，而不是基于我尚未承诺的未来功能。
+
+如果未来增加新的能力，会在更新日志中说明。
+
+------
+
+## 38. 遇到 Bug 时，怎样提供最有帮助的反馈？
+
+如果你遇到可以稳定复现的问题，建议尽量提供：
+
+- Unreal Engine 版本
+- 可以重复执行的复现步骤
+- Validate Rig / Report 中的相关信息以及输出日志
+- 必要的截图或录屏
+- 如果适用，说明模型的大致类型、Pose 和结构特点
+
+最有价值的问题报告不是“它坏了”，而是：
+
+> **在什么环境下，执行什么步骤，会稳定出现什么结果。**
+
+这会大幅提高定位和修复 Bug 的效率。
