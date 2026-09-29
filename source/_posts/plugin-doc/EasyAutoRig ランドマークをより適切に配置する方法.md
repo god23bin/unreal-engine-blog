@@ -41,7 +41,7 @@ pelvis は人体の股関節（臀部周辺）に位置します。その隣に 
 
 **衣服のないベースボディの例として、ここでは UE Manny を使用します。Landmark を配置すると、以下のようになります。**
 
-![](EasyAutoRig 如何更好地放置标记？.assets/image-20260929172233584.png)
+![](https://pic-bed-of-god23bin.oss-cn-shenzhen.aliyuncs.com/img/202609291844839.png)
 
 ## 配置例
 

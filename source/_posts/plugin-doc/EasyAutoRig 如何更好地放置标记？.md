@@ -41,7 +41,7 @@ pelvis 就是人体髋关节（臀部）所在位置；旁边则是 thigh 大腿
 
 **纯裸模我这里使用 UE Manny 作为演示，放置后如下图所示：**
 
-![](EasyAutoRig 如何更好地放置标记？.assets/image-20260929172233584.png)
+![](https://pic-bed-of-god23bin.oss-cn-shenzhen.aliyuncs.com/img/202609291844839.png)
 
 ## 放置示例
 

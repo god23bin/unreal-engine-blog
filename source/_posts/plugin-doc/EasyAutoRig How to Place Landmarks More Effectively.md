@@ -41,7 +41,7 @@ Therefore, the Landmarks we place should follow the same principle. Of course, t
 
 **For an unclothed base body, I use UE Manny as the example. The Landmark placement is shown below:**
 
-![](EasyAutoRig 如何更好地放置标记？.assets/image-20260929172233584.png)
+![](https://pic-bed-of-god23bin.oss-cn-shenzhen.aliyuncs.com/img/202609291844839.png)
 
 ## Placement Examples
 
