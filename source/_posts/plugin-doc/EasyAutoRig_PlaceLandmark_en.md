@@ -11,11 +11,13 @@ tag:
 published: true
 ---
 
-When using EasyAutoRig, the most important operation is placing the Landmarks. Simply put, the Landmarks you place determine the final bone positions.
-
 > **{% post_link plugin-doc/EasyAutoRig_DetailedGuide_en-US EasyAutoRig Detailed User Guide %}**
 >
 > **{% post_link plugin-doc/EasyAutoRig_FAQ_en-US EasyAutoRig FAQ %}**
+
+When using EasyAutoRig, the most important operation is placing the Landmarks. Simply put, the Landmarks you place determine the final bone positions.
+
+> **Tip for 1.1.0**: you can now click **Auto Place** on the toolbar first to let the plugin place the body and finger points, then use this guide to check and adjust them one by one, especially the "Check first" points in the **Report**. The spine, upper neck and collarbone points are calculated automatically from the points around them, and you can look at the fingers on their own with the **Hand View** in the **Landmarks** panel.
 
 ## So, how can you place body Landmarks more accurately?
 
@@ -99,9 +101,47 @@ ball is positioned around the ball of the foot.
 
 ![](https://pic-bed-of-god23bin.oss-cn-shenzhen.aliyuncs.com/img/202609302326402.png)
 
-If there is any calculation error, you can adjust the Landmark manually. In the Landmark panel, constrain the Landmark's movement plane, then drag it to fine-tune its position.
+> 📷 **Screenshot** (replaces the image above): close-up of the 1.1.0 toolbar with **Joint Center** turned on. The new toolbar has an **Auto Place** button after the separator.
+
+If there is any calculation error, you can adjust the Landmark manually. In the **Joint Center** section of the **Landmarks** panel, choose **Front Plane** or **Side Plane** to constrain the Landmark's movement plane, then drag it to fine-tune its position. You can also use **Depth -** / **Depth +** to fine-tune the depth.
 
 ![](https://pic-bed-of-god23bin.oss-cn-shenzhen.aliyuncs.com/img/202609302326339.png)
+
+> 📷 **Screenshot** (replaces the image above): the **Joint Center** section of the 1.1.0 **Landmarks** panel (**Depth -**, **Depth +**, **Centerline**, **View Plane / Front Plane / Side Plane** and so on), with a selected point and the green plane guide in the viewport.
+
+## Check From the Front and the Side
+
+Look at every point from at least two directions: **face-on to check height and left-right position, and in profile to check depth.**
+
+Note: EasyAutoRig characters face `+Y`, but the Front / Back / Left / Right names in the UE view menu follow UE's own axes, so they do not match the character:
+
+| To see                           | UE 5.5                            | UE 5.8                    |
+| -------------------------------- | --------------------------------- | ------------------------- |
+| The character's front (the face) | **Right** view, `Alt + Shift + K` | **Left** view, `Alt + K`  |
+| The character's side             | **Front** view, `Alt + H`         | **Front** view, `Alt + H` |
+
+In other versions, go by what you see: if you can see the character's face, you are looking at the front.
+
+## Finger Landmarks
+
+Place each finger's first point at **the joint where the finger meets the palm**, then the remaining points in order toward the fingertip at **the finger's bends**. Keep them all inside the finger, and do not place one at the fingertip.
+
+Fingers are small, so use the **Hand View** in the **Landmarks** panel: click **Left Hand Back** or **Left Palm**, and the viewport shows only that hand with the fingers pointing up. Clicks then only hit this hand, and with **Joint Center** on, dragging moves along the plane of the palm. Use the back-of-hand view for the left-right spread of the fingers, then check the depth from the side (finger points belong in the middle of the finger's thickness). Click **Show Whole Model** to go back.
+
+> 📷 **Screenshot:** The Hand View showing the back of the left hand, with all five fingers' points placed (3 points per finger, one at each joint). Optionally add the palm view for comparison.
+
+## What to Check After Auto Place
+
+Auto Place gets the points close to the joints, but these cases deserve a second look:
+
+- The "Check first" points in the **Report**: points where the left and right detections disagreed, a head point whose height was estimated from the neck, and points whose depth is a guess.
+- Shoulder (upperarm): check from the side that it is inside the shoulder joint, not on the shoulder surface or in the middle of the upper arm.
+- Hip (thigh): with skirts or coats, make sure it is inside the joint at the top of the thigh, not on the skirt.
+- Wrist (hand): when the hand holds a prop, make sure it is between the forearm and the hand.
+- Ankle (foot): with long boots, make sure it is inside the joint between the lower leg and the foot.
+- Fingers: if the Report says the fingers were not placed, or a finger point looks off its joint, adjust it in the Hand View.
+
+When a point looks right, click **Confirm Point** or **Confirm All Estimated** in the **Landmarks** panel.
 
 ## Placement Examples
 
