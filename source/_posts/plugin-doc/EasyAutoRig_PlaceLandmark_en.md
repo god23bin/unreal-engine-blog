@@ -101,13 +101,9 @@ ball is positioned around the ball of the foot.
 
 ![](https://pic-bed-of-god23bin.oss-cn-shenzhen.aliyuncs.com/img/202609302326402.png)
 
-> 📷 **Screenshot** (replaces the image above): close-up of the 1.1.0 toolbar with **Joint Center** turned on. The new toolbar has an **Auto Place** button after the separator.
-
 If there is any calculation error, you can adjust the Landmark manually. In the **Joint Center** section of the **Landmarks** panel, choose **Front Plane** or **Side Plane** to constrain the Landmark's movement plane, then drag it to fine-tune its position. You can also use **Depth -** / **Depth +** to fine-tune the depth.
 
 ![](https://pic-bed-of-god23bin.oss-cn-shenzhen.aliyuncs.com/img/202609302326339.png)
-
-> 📷 **Screenshot** (replaces the image above): the **Joint Center** section of the 1.1.0 **Landmarks** panel (**Depth -**, **Depth +**, **Centerline**, **View Plane / Front Plane / Side Plane** and so on), with a selected point and the green plane guide in the viewport.
 
 ## Check From the Front and the Side
 
@@ -127,8 +123,6 @@ In other versions, go by what you see: if you can see the character's face, you 
 Place each finger's first point at **the joint where the finger meets the palm**, then the remaining points in order toward the fingertip at **the finger's bends**. Keep them all inside the finger, and do not place one at the fingertip.
 
 Fingers are small, so use the **Hand View** in the **Landmarks** panel: click **Left Hand Back** or **Left Palm**, and the viewport shows only that hand with the fingers pointing up. Clicks then only hit this hand, and with **Joint Center** on, dragging moves along the plane of the palm. Use the back-of-hand view for the left-right spread of the fingers, then check the depth from the side (finger points belong in the middle of the finger's thickness). Click **Show Whole Model** to go back.
-
-> 📷 **Screenshot:** The Hand View showing the back of the left hand, with all five fingers' points placed (3 points per finger, one at each joint). Optionally add the palm view for comparison.
 
 ## What to Check After Auto Place
 
